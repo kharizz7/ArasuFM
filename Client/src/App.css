@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+/* App.css */
+.gradient-background {
+  background: #0f0c29; /* Fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* Modern browsers */
+ 
+}
+.bg-tit{
+  /* background: linear-gradient(to top, #292E49, #536976) */
+  
+}
+/* h1 live */
+/* Red Neon Glow for H1 (White Text) */
+@keyframes flicker {
+  0% { text-shadow: 0 0 5px #f00, 0 0 10px #f00, 0 0 20px #ff0000; }
+  50% { text-shadow: 0 0 10px #f00, 0 0 20px #ff0000, 0 0 30px #ff0000; }
+  100% { text-shadow: 0 0 5px #f00, 0 0 10px #ff0000, 0 0 15px #ff0000; }
+}
+
+.animate-flicker {
+  animation: flicker 1.5s infinite alternate;
+}
+
+.neon-text {
+  color: white;
+  text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+}
+
+/* Blue Neon Border */
+.neon-border {
+  border-color: rgb(9, 208, 155) !important;
+  box-shadow: 0 0 10px rgb(4, 184, 197), 0 0 20px rgb(6, 204, 211), 0 0 30px rgb(5, 210, 224);
+}
+
+
+
+/* Add this to your CSS file */
+@media (pointer: coarse) {
+  .touch-interactive:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+  }
+}
+
+/* Custom continuous spin animation */
+/* Quick Spin Animation */
+@keyframes zoom-in-out {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+.animate-zoom-in-out {
+  animation: zoom-in-out 4s ease-in-out infinite;
+}
+

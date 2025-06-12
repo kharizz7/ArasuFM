@@ -1,0 +1,89 @@
+.neon-border {
+    border: 1px solid #39ff14; /* Neon green */
+    box-shadow: 0 0 8px #39ff14, 0 0 8px #39ff14, 0 0 14px #39ff14;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  /* Add this CSS for running border effect */
+.running-border {
+    position: relative;
+    padding: 1px;
+    background: linear-gradient(90deg, #00ff00, #006400);
+    background-size: 200% 200%;
+    animation: runningBorder 3s linear infinite;
+    border: 1px solid transparent;
+     /* Ensure no rounded corners */
+  }
+  
+  .running-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid transparent;
+    background: inherit;
+    z-index: -1;
+  }
+  
+  @keyframes runningBorder {
+    0% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: -100% 50%;
+    }
+  }
+  
+  /* blue */
+  .bluerunning-border {
+    position: relative;
+    padding: 2px;
+    background: linear-gradient(90deg, #191de9, #0847ad);
+    background-size: 200% 200%;
+    animation: runningBorder 3s linear infinite;
+    border: 2px solid transparent;
+    border-radius: 0; /* Ensure no rounded corners */
+  }
+  
+  .bluerunning-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid transparent;
+    background: inherit;
+    z-index: -1;
+  }
+  
+  @keyframes bluerunningBorder {
+    0% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: -100% 50%;
+    }
+  }
+
+
+  /* wave */
+  @keyframes wave {
+    0% {
+      transform: scale(0);
+      opacity: 0.5;
+    }
+    50% {
+      transform: scale(1.5);
+      opacity: 0.1;
+    }
+    100% {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+  
+  .animate-wave {
+    animation: wave 2s infinite;
+  }
+  
+  button:hover .animate-wave {
+    opacity: 0.5;
+  }
+  

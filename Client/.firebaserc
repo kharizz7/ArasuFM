@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "arasufm-podcasts": "arasu-fm-latest",
+    "default": "arasu-fm-latest"
+  },
+  "targets": {
+    "arasu-fm-latest": {
+      "hosting": {
+        "arasu-fmpodcasts": [
+          "arasu-fm-podcasts"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
