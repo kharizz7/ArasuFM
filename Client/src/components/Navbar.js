@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import fmlogo from "../assets/website_logo.png";
-import clgname from "../assets/clgname.png"; // Import the college name image
+import clgname from "../assets/clgname.png"; 
 import { Link } from "react-router-dom";
 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen); // Toggle the menu state
-  const closeMenu = () => setIsOpen(false); // Close the menu when an item is clicked
+  const toggleMenu = () => setIsOpen(!isOpen); 
+  const closeMenu = () => setIsOpen(false); 
 
   const navItems = ["home", "live","podcasts","android App", "youtube", "about", "contact"];
 
@@ -19,7 +19,7 @@ const Navbar = () => {
                    shadow-lg  transition-colors duration-500"
       >
         <div className="flex flex-wrap lg:flex-nowrap items-center justify-between p-1 ">
-          {/* Brand */}
+         
           <Link
   to="/"
   onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -33,16 +33,16 @@ const Navbar = () => {
 </Link>
 
 
-          {/* College Name for Large Screens */}
+          
           <div className="hidden lg:block">
             <img
-              src={clgname} // Display college name image
+              src={clgname} 
               alt="ARASU ENGINEERING COLLEGE - KUMBAKONAM"
-              className=" h-auto w-[200px] lg:w-[400px]  pt-6" // Adjust the size as needed
+              className=" h-auto w-[200px] lg:w-[400px]  pt-6" 
             />
           </div>
 
-          {/* Hamburger Menu */}
+          
           <button
             onClick={toggleMenu}
             className="text-white lg:hidden focus:outline-none"
@@ -66,27 +66,26 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* College Name for Mobile Screens */}
         <div className="block lg:hidden text-center mt-2 pb-1 text-xs sm:text-sm font-extrabold">
           <img
-            src={clgname} // Display college name image for mobile screens
+            src={clgname} 
             alt="ARASU ENGINEERING COLLEGE - KUMBAKONAM"
-            className="h-auto w-[200px]" // Adjust size for mobile view
+            className="h-auto w-[200px]" 
           />
         </div>
 
-        {/* Desktop Menu */}
+       
         <nav className="hidden lg:flex space-x-6 mt-2 lg:mt-0">
         {navItems.map((item) => (
   <Link
     key={item}
     to={`/#${item}`}
     onClick={() => {
-      setIsOpen(false); // close menu
+      setIsOpen(false); 
       setTimeout(() => {
         const el = document.getElementById(item);
         if (el) el.scrollIntoView({ behavior: "smooth" });
-      }, 100); // wait for route to change
+      }, 100); 
     }}
     className="relative pb-1 px-4 font-extrabold text-white transition-colors duration-300 
               before:content-[''] before:absolute before:bottom-0 before:left-0 
@@ -99,7 +98,7 @@ const Navbar = () => {
 
         </nav>
 
-        {/* Mobile Menu */}
+       
         {isOpen && (
           <div
             className="lg:hidden bg-black bg-opacity-40 backdrop-blur-lg 

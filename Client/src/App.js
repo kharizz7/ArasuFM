@@ -16,12 +16,11 @@ import { Helmet } from 'react-helmet';
 function App() {
   return (
     <div className="gradient-background text-white min-h-screen flex flex-col">
-      {/* SEO Meta Tags */}
-      <Helmet>{/* …your meta tags… */}</Helmet>
+      
 
       <Navbar />
 
-      {/* Main content that grows */}
+      
       <div className="flex-grow">
         <Routes>
           <Route path="/" element={
@@ -42,7 +41,7 @@ function App() {
         </Routes>
       </div>
 
-      {/* Footer at the bottom */}
+     
       <Footer />
     </div>
   );

@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white py-8">
       <div className="max-w-screen-xl mx-auto text-center px-4">
-        {/* Branding Section */}
+       
         <p className="text-lg font-semibold mb-2">ARASUFM 90.4 MHz</p>
         <p className="mb-2">Your favorite radio station</p>
         <p className="mb-2">
@@ -13,7 +13,7 @@ const Footer = () => {
         </p>
         <p className='mb-2'>All Rights Reserved.</p>
 
-        {/* Social Media Links */}
+        
         <div className="flex justify-center space-x-4 mb-4">
           <a
             href="https://www.facebook.com/arasu.fm.5"
@@ -49,7 +49,7 @@ const Footer = () => {
           </a>
         </div>
 
-        {/* Navigation Links */}
+        
         <div className="text-sm mb-4">
           <a href="#about" className="mx-2 hover:underline">
             About Us
@@ -62,7 +62,7 @@ const Footer = () => {
           </a>
         </div>
 
-        {/* Developer Section */}
+        
         <p className="text-sm">
           Developed by <span className="font-semibold text-blue-400">Bluewolf Networks</span>
         </p>

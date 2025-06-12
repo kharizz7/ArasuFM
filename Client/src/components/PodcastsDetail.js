@@ -52,14 +52,14 @@ const PodcastDetail = () => {
     <div className="min-h-screen pt-[180px] pb-20 px-4 bg-gray-700 text-white">
       <div className="max-w-4xl mx-auto space-y-8 border bg-black border-gray-700 rounded-xl p-6"> {/* Border added here */}
         
-        {/* 1st Row - Title */}
+        
         <div className="w-full">
           <h1 className="text-3xl md:text-5xl font-bold tracking-wide text-green-400 text-center">
             {podcast.title}
           </h1>
         </div>
 
-        {/* 2nd Row - Image */}
+        
         <div className="w-full flex justify-center">
           <div className="overflow-hidden rounded-2xl  shadow-xl w-[100px] p-2">
             <img
@@ -70,21 +70,21 @@ const PodcastDetail = () => {
           </div>
         </div>
 
-        {/* 3rd Row - Audio Player */}
+       
         <div className="w-full flex justify-center">
           <div className="backdrop-blur-md bg-[#1a1a1a] border border-gray-700 rounded-xl shadow-lg p-2 neon-border w-full max-w-md">
-            {/* Description */}
+           
             {podcast.description && (
               <p className="text-sm text-gray-300 text-center mb-4">{podcast.description}</p>
             )}
-            {/* Audio Player */}
+            
             {podcast.audioId ? (
               <AudioPlayer
-                autoPlay={true} // Automatically start playing the audio when it's ready
+                autoPlay={true} 
                 src={`${SERVER_URL}/proxy/audio?id=${podcast.audioId}`}
                 showJumpControls={false}
                 customAdditionalControls={[]}
-                className="overflow-hidden w-[500px]" // Custom width
+                className="overflow-hidden w-[500px]" 
                 style={{
                   backgroundColor: "#111",
                   color: "#fff",
@@ -109,7 +109,6 @@ const PodcastDetail = () => {
 
 export default PodcastDetail;
 
-// Simple hashCode function
 if (!String.prototype.hashCode) {
   String.prototype.hashCode = function() {
     var hash = 0;

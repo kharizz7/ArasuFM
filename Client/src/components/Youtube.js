@@ -36,7 +36,7 @@ const YouTubeVideos = () => {
         `https://www.googleapis.com/youtube/v3/search?key=${API_KEYS[apiKeyIndex]}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=${MAX_RESULTS}`
       );
       const data = await response.json();
-      console.log(data); // Debugging
+      console.log(data); 
 
       if (Array.isArray(data.items)) {
         setVideos(data.items);
@@ -49,7 +49,7 @@ const YouTubeVideos = () => {
       setUseFallback(true);
       if (apiKeyIndex < API_KEYS.length - 1) {
         setApiKeyIndex(apiKeyIndex + 1);
-        fetchVideos();  // Try next API key if one fails
+        fetchVideos();  
       } else {
         console.error('All API keys have failed');
       }

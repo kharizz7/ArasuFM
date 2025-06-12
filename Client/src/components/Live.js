@@ -32,7 +32,7 @@ const Live = () => {
       </h2>
 
       <div className="relative flex justify-center p-4 w-full">
-        {/* Wrapping it inside a flex-center div */}
+        
         <div className="relative rounded-2xl p-4 cursor-pointer w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[700px] bg-gray-900 border-4 border-blue-500 shadow-lg shadow-blue-500/50 neon-glow" onClick={handleLottieClick}>
           <DotLottieReact
             src="https://lottie.host/4bde43bf-42e3-4bff-92e2-9c70589ab673/GKpknrDQss.lottie"

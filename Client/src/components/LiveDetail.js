@@ -41,15 +41,15 @@ const LiveDetail = () => {
       fullDate: fullDate,
     });
 
-    // Set the current audio based on the day of the week
+    
     setCurrentAudio(audioSources[today.getDay()]);
   }, []);
 
   const toggleMute = () => {
     if (playerRef.current && playerRef.current.audio.current) {
       const audio = playerRef.current.audio.current;
-      audio.muted = !audio.muted; // Toggle mute/unmute
-      setIsMuted(audio.muted); // Update the mute state
+      audio.muted = !audio.muted; 
+      setIsMuted(audio.muted); 
     }
   };
 
@@ -86,25 +86,25 @@ const LiveDetail = () => {
             src={currentAudio}
             ref={playerRef}
             volume={1}
-            muted={isMuted} // Control mute via state
-            style={{ display: 'none' }} // Hide the default player UI
+            muted={isMuted} 
+            style={{ display: 'none' }} 
           />
         )}
 
-        {/* Two Row Layout */}
+        
         <div className="flex flex-col items-center">
-          {/* First Row with Wave Effect */}
+         
           <div className="relative w-full mb-6">
             <div className="absolute top-0 left-0 w-full h-full bg-blue-500 opacity-30 animate-wave"></div>
           </div>
 
-          {/* Second Row with Mute Button */}
+          
           <div className="relative flex justify-center items-center">
             <button
               onClick={toggleMute}
               className="relative px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-full font-bold text-white flex items-center justify-center gap-2 transition-all duration-300 overflow-hidden"
             >
-              {/* Button Text and Icon */}
+              
               {isMuted ? (
                 <>
                   <FaVolumeMute className="text-xl" /> Unmute

@@ -71,7 +71,7 @@ const Podcasts = () => {
         <p className="text-center text-gray-400">No podcasts available.</p>
       )}
 
-      {/* Grid Layout */}
+    
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {podcasts.slice(0, visibleCount).map((podcast) => (
           <div
@@ -79,12 +79,12 @@ const Podcasts = () => {
             onClick={() => handleCardClick(podcast.id)}
             className="relative group cursor-pointer bg-black bg-opacity-70 rounded-lg shadow-md hover:shadow-xl transition duration-300 flex flex-col md:flex-row items-center p-4 space-x-0 md:space-x-4 overflow-hidden active:opacity-100" // added active state for touch events
           >
-            {/* Hover Text */}
+           
             <div className="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 active:opacity-100 transition duration-300">
               <p className="text-yellow-400 text-2xl font-bold"> Tap to Play</p>
             </div>
 
-            {/* Left Image */}
+           
             <img
               src={`/podcasts/${podcast.imageUrl}`}
               alt={podcast.title || "Podcast Cover"}
@@ -92,7 +92,7 @@ const Podcasts = () => {
               loading="lazy"
             />
 
-            {/* Right Content */}
+            
             <div className="flex flex-col text-white flex-grow text-center md:text-left">
               <h3 className="text-lg font-semibold mb-2">{podcast.title || "Untitled Podcast"}</h3>
               
@@ -114,7 +114,7 @@ const Podcasts = () => {
         ))}
       </div>
 
-      {/* Show More / Show Less Buttons */}
+     
       <div className="flex justify-center space-x-4 mt-8">
         {visibleCount < podcasts.length && (
           <button

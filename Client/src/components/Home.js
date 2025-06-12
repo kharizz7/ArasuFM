@@ -57,8 +57,8 @@ const Home = () => {
                 ${!spinDone && isPlaying ? 'animate-spin-slow' : ''} // Slow spin effect
                 ${isPlaying ? 'animate-zoom-in-out' : ''}            // Zoom effect when playing
               `}
-              onAnimationEnd={() => setSpinDone(true)} // Set spinDone to true once the spin animation completes
-              onClick={handleClick} // Add click event handler
+              onAnimationEnd={() => setSpinDone(true)} 
+              onClick={handleClick} 
             />
           </div>
         </div>

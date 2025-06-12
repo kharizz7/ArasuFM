@@ -7,7 +7,7 @@ const convertToDirectLink = (url) => {
     return match ? `https://drive.google.com/uc?export=download&id=${match[1]}` : url;
 };
 
-// Function to update Firestore URLs
+
 const updateFirestoreLinks = async () => {
     try {
         const querySnapshot = await getDocs(collection(db, "media"));
@@ -16,17 +16,14 @@ const updateFirestoreLinks = async () => {
             const data = document.data();
             const updates = {};
 
-            // Check and update audioURL
+           
             if (data.audioURL) {
                 updates.audioURL = convertToDirectLink(data.audioURL);
             }
 
-            // Check and update imageUrl
-            if (data.imageUrl) {
-                updates.imageUrl = convertToDirectLink(data.imageUrl);
-            }
+           
 
-            // If there is something to update, update it
+           
             if (Object.keys(updates).length > 0) {
                 await updateDoc(doc(db, "media", document.id), updates);
                 console.log(`Updated document ${document.id} with:`, updates);
