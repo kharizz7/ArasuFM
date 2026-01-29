@@ -1,14 +1,13 @@
 import React, { useState, useRef } from 'react';
 import Mic from '../assets/michd.png';
-import AudioClip from '../assets/mic_audio.mp3'; // Import your audio file
+import AudioClip from '../assets/mic_audio.mp3'; 
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { Typewriter } from 'react-simple-typewriter';
 
 const Home = () => {
   const audioRef = useRef(null); // Reference to the audio element
-  const [isPlaying, setIsPlaying] = useState(false); // State to track whether audio is playing
-  const [spinDone, setSpinDone] = useState(false); // State to track whether the spin has finished
-
+  const [isPlaying, setIsPlaying] = useState(false); 
+  const [spinDone, setSpinDone] = useState(false); 
   const handleClick = () => {
     if (audioRef.current) {
       if (isPlaying) {
